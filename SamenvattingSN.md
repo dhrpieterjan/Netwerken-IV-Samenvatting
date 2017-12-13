@@ -121,6 +121,34 @@ STP ensures that there is only one logical path between all destinations on the 
 
 - check cursus
 
+## H5: Dynamic Routing
+
+### Dynamic Routing Protocol
+
+**Routing Protocols** are used to facilitate the exchange of routing information between routers.
+
+#### Purpose of dynamic routing protocols
+
+- Discovery of remote networks
+- Maintaining up-to-date routing information
+- Choosing the best path to destination  networks
+- The bility to find a new best path if the  current path is no longer available
+
+#### Classification:
+
+- Purpose 
+    + Interior Gateway (IGP)
+    +   Exterior Gateway (EGP)
+- Operation
+    + Distance vector
+    + link-state
+    + path-vector
+- Behavior
+    + Classful (legacy) 
+    + classless
+
+![DRP](./Images/DRP.jpg)
+
 
 
 
