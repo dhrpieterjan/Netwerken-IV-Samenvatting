@@ -55,7 +55,7 @@ Turn off DTP on interfaces on a Cisco switch that is connected to devices that d
 
 ### STP
 
-**Spannings ree Protocol** provides redundancy as OSI Layer 1 end 2
+**Spannings Tree Protocol** provides redundancy as OSI Layer 1 end 2
 When multiple paths exist between two devices on a network, and there is no spanning tree implementation on the switches, a Layer 2 loop occurs. 
 
 STP ensures that there is only one logical path between all destinations on the network by intentionally blocking redundant paths that could cause a loop. 
@@ -80,9 +80,48 @@ STP ensures that there is only one logical path between all destinations on the 
 
 #### STP Confirutation:
 
--check cursus
+- check cursus
 
 ## H4: EtherChannel and HSRP
+
+### Link Aggregation Concepts
+
+**Link aggregation** combines a number of physical links between the switches to increase the overall bandwidth between two devices.
+
+### Implementation Restrctions
+
+- EtherChannel interface types cannot be mixed. for example, Fast Ethernet and Gigabit Ethernet cannot be mixed in a port channel.
+- Individual EtherChannel group member port configuration must be consistent on both devices. For example, if the physical ports of one side are configured as trunks, the physical ports of the other side must also be configured as trunks within the same native VLAN. 
+
+### Protocols
+
+- **Port Aggregation Protocol: PAgP**
+    + PAgP sends packets every 30 seconds to check for configuration consistency and manages link additions and failures.
+    + PAgP supports three modes.
+        * **Desirable** – Port actively initiates negotiations with other interfaces by sending PAgP packets.
+        * **Auto** – Port passively negotiates state, but does not initiate PAgP negotiation.
+        * **On** – Creates a channel member without negotiation
+
+
+- **Link Aggregation Control Protocol:**
+    + PAgP supports three modes.
+        * **Active** – Port actively initiates negotiations with other interfaces by sending LACP packets.
+        * **Passive** – Port passively negotiates state, but does not initiate LACP negotiation.
+        * **On** – Creates a channel member without negotiation.
+
+#### Link Aggregation Confirutation
+
+- check cursus
+
+### First Hop Redundancy Protocols
+
+**Why:** In a switched network, each client receives only one default gateway and there is no way to use a secondary gateway, even if a second path exists to carry packets off the local segment.
+
+#### First Hop Redundancy Protocol Confirutation
+
+- check cursus
+
+
 
 
 
